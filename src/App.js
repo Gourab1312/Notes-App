@@ -8,23 +8,23 @@ const App = () => {
 	const [notes, setNotes] = useState([
 		{
 			id: nanoid(),
-			text: 'This is my first note!',
-			date: '15/04/2021',
+			text: 'Welcome to my Notes App !',
+			date: 'Wed Sep 21 2022',
 		},
 		{
 			id: nanoid(),
-			text: 'This is my second note!',
-			date: '21/04/2021',
+			text: 'Put your important notes of the day arranged',
+			date: 'Wed Sep 21 2022',
 		},
 		{
 			id: nanoid(),
-			text: 'This is my third note!',
-			date: '28/04/2021',
+			text: 'Refresh as much as you want , your notes are safe with us',
+			date: 'Thu Sep 22 2022',
 		},
 		{
 			id: nanoid(),
-			text: 'This is my new note!',
-			date: '30/04/2021',
+			text: 'Add as many notes you want to using our green card!',
+			date: 'Thu Sep 22 2022',
 		},
 	]);
 
@@ -66,7 +66,7 @@ const App = () => {
 		const newNote = {
 			id: nanoid(),
 			text: text,
-			date: date.toLocaleDateString(),
+			date: date.toDateString(),
 		};
 		const newNotes = [...notes, newNote];
 		setNotes(newNotes);
