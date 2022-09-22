@@ -11,3 +11,111 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dark-mode{
+  background-color: black;
+}
+
+.dark-mode h1{
+  color: white;
+}
+
+.container{
+  max-width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  min-height: 100vh;
+}
+
+
+
+/* using the css grid on the notesList div to arrange its direct children nicely */
+.notes-list{
+  display: grid;
+  grid-gap: 1rem;
+  /* this tells css grid i want four cards each with the width of 250px */
+  /* grid-template-columns: repeat(4,250px); */
+  
+  /* now previously we were hardcoding so there was no responsiveness. but now we gonnna use the autofit */
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  /* this tells one unit cant be smaller than 250px and cant be bigger than one fractional unit(total width) and autofit acts accordingly */
+}
+
+.note.new{
+  background-color: #67d7cc;
+
+}
+
+textarea{
+  border: none;
+  resize: none;
+  background-color: #67d7cc;
+}
+
+/* this targets any text area that is on focus and doesnt let the border appear when the user is typing on the new card */
+textarea:focus{
+  outline: none;
+}
+
+.save{
+  background-color: #e1e1e1;
+  border: none;
+  border-radius: 15px;
+  padding: 5px 10px ;
+}
+
+.save:hover{
+  background-color: #ededed;
+  cursor:pointer;
+}
+
+/* styling each of the note card */
+.note{
+  background-color: #fef68a;
+  border-radius: 10px;
+  padding:1rem;
+  min-height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  /* this keeps the spaces given by the user intact */
+  white-space: pre-wrap;
+}
+
+/* styling the date and the delete icon div */
+.note-footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.delete-icon:hover{
+  cursor: pointer;
+}
+
+.search{
+  display: flex;
+  align-items: center;
+  background-color:rgb(233,233,233);
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 1.5em;
+}
+
+.search input{
+  border: none;
+  background-color: rgb(233,233,233);
+}
+
+.search input:focus{
+  outline: none;
+}
